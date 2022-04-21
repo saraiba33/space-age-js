@@ -9,10 +9,7 @@ const EARTH_TO_OTHER_PLANETS = {
   neptune: 164.79132,
 };
 
-export const age = (
-  planet: keyof typeof EARTH_TO_OTHER_PLANETS,
-  seconds: number
-): number => {
+export const age = (planet, seconds) => {
   const earthYears = seconds / 31557600;
   const years = earthYears / EARTH_TO_OTHER_PLANETS[planet];
 
